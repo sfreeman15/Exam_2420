@@ -2,7 +2,10 @@
 **Simon Freeman A01074210**
 
 ## Part 1
+```bash
 sudo app update && sudo apt upgrade
+```
+
 
 ## Part 2
 1. To search for eco, I typed /eco and hit enter
