@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 
 Checking status after enabling and starting service:
 
-![part5_status](Images/part5_status.png)
+![part5_status_ctl](Images/part5_status_ctl.png)
 
 ### Part 6
 
