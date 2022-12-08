@@ -16,7 +16,7 @@ sudo app update && sudo apt upgrade
 
 ## Part 3
 
-### Finding current boot command
+Finding current boot command
 I typed `man journalctl` to get into the man page.
 
 To search for the commands, I typed the `/` followed by a word, and used `n` to skip through the words until I found something useful.
@@ -41,4 +41,48 @@ sudo journalctl -p warning -b -o json-pretty
 ```
 
 ![part_3_using_command](Images/part_3_using_command.png)
+
+
+### Part 4
+
+```bash
+#!/bin/bash
+exec > /opt/motd
+
+echo "Regular users on the system are:"
+find_user=$(grep -E 1[0-9]{3} /etc/passwd)
+
+
+
+while IFS= read -r line
+do
+   echo "$line"
+done < <(printf '%s\n' "$find_user")
+
+
+
+echo "Users currently logged in are:"
+echo $(whoami)
+```
+
+### Part 5
+
+I created the find_users.service file in the /etc/systemd/system directory.
+
+```bash
+[Unit]
+Description=Prints out regular users and who is currently logged in. Appends output to /etc/motd
+
+[Service]
+Type=simple
+ExecStart=/opt/find_users/find_users
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+Checking status after enabling and starting service:
+
+![part5_status](Images/part5_status.png)
 
