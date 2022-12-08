@@ -3,7 +3,7 @@
 
 ## Part 1
 ```bash
-sudo app update && sudo apt upgrade
+  sudo app update && sudo apt upgrade
 ```
 
 
