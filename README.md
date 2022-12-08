@@ -11,9 +11,9 @@
 1. To search for eco, I typed /eco and hit enter
 2. I then typed `cgn` to delete the occurence of the word echo
 3. I then typed `echo` in the location where eco was deleted
-4. To change the 1 to a 0 in the if statament, I used /0 to find the 0 and hit enter
-5. I then typed `cgn` to delete the occurence of the word echo
-6. I repeated this process for each instance of eco
+4. I then typed `cgn` to delete the occurence of the word echo
+5. I repeated this process for each instance of eco
+6. To change the 1 to a 0 in the if statament, I used `/0` to find the 0 and hit enter
 7. I then typed 0 to replace to make it so the echo command would work if no arguments were passed
 
 
