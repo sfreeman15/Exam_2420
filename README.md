@@ -86,3 +86,21 @@ Checking status after enabling and starting service:
 
 ![part5_status](Images/part5_status.png)
 
+### Part 6
+
+```bash
+[Unit]
+Description=Run foo weekly and on boot
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target
+```
+
+Checking status of find_users.timer after enabling and starting:
+
+![part6_status_timer](Images/part6_status_timer.png)
+
